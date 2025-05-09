@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RATIONAL DREAMS</title>
+    <link rel="stylesheet" href="/editstyle.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Megrim&family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <nav>
+        <ul>
+           <li> <a href="/index.ejs">        HOME              </a>       </li>
+           <li> <a href="/guide.ejs">        GUIDE             </a>       </li>
+           <li> <a href="/dreamjournal.ejs"> DREAM JOURNAL     </a>       </li>
+           <li> <a href="#">                  SHARE             </a>       </li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="alignbanner">
+  <div class="banner">
+      <% if(locals.fetch){ %>
+        <section class="story-container">
+          <h2 class="width_85l">EDIT</h2>
+          <form action="/dreamjournal.ejs/edit/<%= fetch.id %>" method="post">  
+          <textarea type="text" class="title" name="title" placeholder="Title" rows="1" required><%= fetch.title  %></textarea>
+          <textarea type="text" class="story-input" name="text" placeholder="I had a lucid dream..." rows="12" required> <%= fetch.text %></textarea>
+     
+         <div class="width_85r"> <button> <a href="/dreamjournal.ejs/cancel">CANCEL</a> </button> <input type="submit" class="submit-button" value="SAVE"></div>
+           </form>
+          </section>
+      <% } else { %>
+      
+        <h1>You didn't select any story to edit</h1>
+
+      <% } %>
+ </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/script.js"></script>
+
+</body>
+</html>
+
+

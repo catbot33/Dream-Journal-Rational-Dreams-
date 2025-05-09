@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+     url('./images/bg_journal.jpeg');
+     background-position: top;
+     background-size: cover;
+     background-attachment: fixed;
+     overflow-x: hidden;
+}
+header{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+width: 60%;
+height: 60%;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+li{
+    list-style: none;
+
+}
+li a{
+    text-decoration: none;
+    font-family: Mina;
+    font-size: 16px;
+}
+li:hover{
+  border-bottom: 1px solid white ;
+}
+.alignbanner{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+.banner{
+  width:  70%;
+  padding: 50px 0px ;
+  transform: translateY(150px);
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    margin:10px 0px ;
+    font-size: 30px;
+    font-family: Megrim;
+    font-weight: 300;
+  }
+
+  
+  .story-input {
+    width: 85%;
+    min-height: 150px;
+    font-size: 18px;
+    font-family:Libre Caslon Display;
+    padding: 12px;
+    border: 1px solid black;
+    color:black;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    background-color: rgb(159, 187, 157);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .title{
+    width: 85%;
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 800;
+    font-family:Inter;
+    padding: 12px;
+    border: 1px solid black;
+    color:black;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+    background-color: rgb(159, 187, 157);
+  }
+  
+  .story-input:focus {
+    border-color:rgb(69, 109, 102) ;
+    box-shadow: 0 0 8px rgba(69, 197, 159, 0.5);
+  }
+  .title:focus {
+    border-color:rgb(69, 109, 102) ;
+    box-shadow: 0 0 8px rgba(69, 197, 159, 0.5);
+  }
+  
+  .submit-button {
+    margin-top: 15px;
+    font-family: Mina;
+    font-weight: 600;
+    padding: 7px 23px;
+    font-size: 13px;
+    background-color: #9FBB9D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #799178;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:active {
+    transform: translateY(0);
+  }
+  .saved{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 80px;
+  }
+  #nosaves{
+    font-size: 10px;
+  }
+  .notes{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    min-height: 200px;
+    font-family:Libre Caslon Display;
+    padding: 20px;
+    border: 1px solid #748a72;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    background-color: rgba(159, 187, 157, 0.7);
+    overflow:hidden ;
+    margin-top:30px ;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+  }
+  .notes:hover{
+    background-color: rgb(159, 187, 157);
+    transform: translateY(-2px);
+  }
+  .width_85l {
+    width:85%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .width_85r {
+    width:85%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .notes p {
+    font-family:Libre Caslon Display;
+    color:black;
+    font-size: 19px;
+    letter-spacing: 0.2px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  .date_time{
+    font-size: 13px;
+    font-family: Inter;
+  }
+  .title_text{
+    font-size: 21px;
+    font-family: Inter;
+    font-weight: 600;
+    color:black;
+  }
+  .bu_ed_del{
+
+    display: flex;
+    padding: 10px 0px;
+    width: 20%;
+    justify-content: space-evenly;
+    
+  }
+  .bu_ed_del button{
+    font-family: Mina;
+    font-weight: 600;
+    padding: 7px 23px;
+    font-size: 13px;
+    background-color: rgba(159, 187, 157, 0.4);
+    color:black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+  }
+  .bu_ed_del button:hover {
+    background-color: #799178;
+    transform: translateY(-2px);
+  }
